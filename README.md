@@ -50,10 +50,15 @@ I have predefined 4 authorities: VIEW, CREATE, UPDATE, DELETE
 The source file moviesDBSecu.sql declares 5 users with different authorities and passwords listed below:
 
 Username        Password        Authorities
+
 Carol           s1a2t3o4r       VIEW
+
 Albert          a5r6e7p8o       VIEW
+
 Werner          t4e3n2e1t       VIEW
+
 Alice           o8p7e6r5a       VIEW, CREATE, UPDATE
+
 Richard         r1o2t3a4s       VIEW, CREATE, UPDATE, DELETE
 
 Moreover any new user can register and be granted the only VIEW authority. All menus are customized to display only the requests that are allowed to the actual user.
