@@ -39,7 +39,7 @@ Note: this project was run on my home computer. To run it on your system you hav
 source/production/resources/install.properties: photoTempDir=/home/dominique/Pictures/tmp/
 
 source/production/resources/log4j2.xml: &lt;RollingFile name="WroxFileAppender" fileName="/home/dominique/logs/application.log"
-                    				 filePattern="/home/dominique/logs/application-%d{MM-dd-yyyy}-%i.log"&gt;
+                                     filePattern="/home/dominique/logs/application-%d{MM-dd-yyyy}-%i.log"&gt;
 
 where the folder /home/dominique should be replaced by a folder that matches your own file system.
 
@@ -49,12 +49,12 @@ I have predefined 4 authorities: VIEW, CREATE, UPDATE, DELETE
 
 The source file moviesDBSecu.sql declares 5 users with different authorities and passwords listed below:
 
-Username 	Password	Authorities
-Carol		s1a2t3o4r	VIEW
-Albert		a5r6e7p8o	VIEW
-Werner		t4e3n2e1t	VIEW
-Alice		o8p7e6r5a	VIEW, CREATE, UPDATE
-Richard		r1o2t3a4s	VIEW, CREATE, UPDATE, DELETE
+Username        Password        Authorities
+Carol           s1a2t3o4r       VIEW
+Albert          a5r6e7p8o       VIEW
+Werner          t4e3n2e1t       VIEW
+Alice           o8p7e6r5a       VIEW, CREATE, UPDATE
+Richard         r1o2t3a4s       VIEW, CREATE, UPDATE, DELETE
 
 Moreover any new user can register and be granted the only VIEW authority. All menus are customized to display only the requests that are allowed to the actual user.
 
