@@ -43,6 +43,11 @@ source/production/resources/log4j2.xml: &lt;RollingFile name="WroxFileAppender" 
 
 where the folder /home/dominique should be replaced by a folder that matches your own file system.
 
+This project can be deployed on Tomcat with the context root: 
+
+localhost:8080/movies-web
+
+
 Note on authorities:
 
 I have predefined 4 authorities: VIEW, CREATE, UPDATE, DELETE
@@ -64,4 +69,5 @@ Richard         r1o2t3a4s       VIEW, CREATE, UPDATE, DELETE
 Moreover any new user can register and be granted the only VIEW authority. All menus are customized to display only the requests that are allowed to the actual user.
 
 
-Dominique Ubersfeld 
+
+Dominique Ubersfeld, Cachan, France 
