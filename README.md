@@ -26,7 +26,7 @@ https://github.com/dubersfeld/MoviesWebCrud
 
 To launch this demo run this command in project directory: `mvn spring-boot:run`.
 
-When the application has started hit the browser on URL: `localhost:8080/movies-web`
+When the application has started open a browser and hit URL: `localhost:8080/movies-web`
 
 Note on authorities:
 
