@@ -1,16 +1,12 @@
 # MoviesWebSecurity
-Spring based Web site with CrudRepository support and Spring Security, running on Tomcat 8 with Maven build
+I present here a Spring Boot based Web site demo with CrudRepository support and Spring Security.
 
-This is a demonstration project on Spring development. It involves:
-MySQL as a database with Spring CrudRepository support 
-Eclipse Mars with Maven plugin as an IDE
-Tomcat 8 as a container
+This is a demonstration project on Spring Boot development. It requires:
 
-moviesDBSecu.sql was used to generate the MySql database used in this project.
+A recent version of MySQL server (I used 8.0.16). 
+A recent version of Maven (I used 3.6.0)
 
-This project can run on Tomcat 8 from Eclipse or on Tomcat 8 standalone from a .war file. It requires Java 8 Runtime Environment.
-
-This is the 5th version of this project. More stuff is coming soon with a version that implements a chat room.
+The file moviesDBSecu.sql was used to generate and populate the MySql database used in this project.
 
 For the basic JDBC version of this project see the repository:
 
@@ -28,25 +24,9 @@ For the CrudRepository version of this project see the repository:
 
 https://github.com/dubersfeld/MoviesWebCrud
 
-For a full tutorial about this project please visit my personal site:
+To launch this demo run this command in project directory: `mvn spring-boot:run`.
 
-http://www.dominique-ubersfeld.com/JAVADEV/SpringDevelopment.html
-
-As a reference book I mainly used Java for Web Applications by Nicholas S. Williams
-
-Note: this project was run on my home computer. To run it on your system you have to edit some files to customize them to your actual file system. They are:
-
-source/production/resources/install.properties: photoTempDir=/home/dominique/Pictures/tmp/
-
-source/production/resources/log4j2.xml: &lt;RollingFile name="WroxFileAppender" fileName="/home/dominique/logs/application.log"
-                                     filePattern="/home/dominique/logs/application-%d{MM-dd-yyyy}-%i.log"&gt;
-
-where the folder /home/dominique should be replaced by a folder that matches your own file system.
-
-This project can be deployed on Tomcat with the context root: 
-
-localhost:8080/movies-web
-
+When the application has started hit the browser on URL: `localhost:8080/movies-web`
 
 Note on authorities:
 
@@ -66,7 +46,24 @@ Alice           o8p7e6r5a       VIEW, CREATE, UPDATE
 
 Richard         r1o2t3a4s       VIEW, CREATE, UPDATE, DELETE
 
-Moreover any new user can register and be granted the only VIEW authority. All menus are customized to display only the requests that are allowed to the actual user.
+Moreover any new user can register and be granted the only VIEW authority. All menus are customized to display only the requests that are allowed to the actual user. This feature requires the Maven dependency:
+```
+<dependency>
+    <groupId>org.thymeleaf.extras</groupId>
+    <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+</dependency>
+```
+Here are some screen shots of the same page seen by users with different authorities:
+
+VIEW only:
+![alt text](images/view.png "VIEW")
+
+VIEW, CREATE, UPDATE
+![alt text](images/create.png "VIEW, CREATE, UPDATE")
+
+VIEW, CREATE, UPDATE, DELETE
+![alt text](images/delete.png "VIEW, CREATE, UPDATE, DELETE")
+
 
 
 
